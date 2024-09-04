@@ -1,13 +1,42 @@
 @use 'icons';
+@use 'components/contentCard/contentCard';
+
+body {
+    background-color: rgb(168, 168, 168);
+}
+
+.contentCard {
+    @extend %contentCard;
+}
 
 .navbar{
+    @extend %contentCard;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 100px;
-    flex-grow: 1;
+    flex-grow: 0;
+    justify-content: space-between;
+    
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.notNavbar {
+    flex-grow: 4;
+    height: 100vh;
 }
 
 .pageContent {
     display: flex;
 }
+
+.email{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+    
