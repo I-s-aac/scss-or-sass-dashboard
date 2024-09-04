@@ -1,5 +1,17 @@
+@use '../../colors';
+
 %contentCard {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$cardBackgroundColor;
     border-radius: 20px;
     padding: 20px;
+    margin: 20px;
+
+    h1:first-of-type,
+    h2:first-of-type,
+    h3:first-of-type {
+        color: colors.$textColor;
+        font-size: larger;
+    }
 }
