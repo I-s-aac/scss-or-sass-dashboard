@@ -2,7 +2,16 @@
 
 %smallCard {
     display: flex;
-    background-color: green;
+    background-color:#004d4d;
     border-radius: 20px;
     padding: 20px;
+    color: white;
+}
+
+%smallCard2 {
+    @extend %smallCard;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
 }

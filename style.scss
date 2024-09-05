@@ -1,5 +1,6 @@
 @use 'components/contentCard/contentCard';
 @use 'components/smallCard/smallCard';
+@use 'components/graph/graph';
 @use 'colors';
 @use 'icons';
 
@@ -13,6 +14,10 @@ body {
 
 .smallCard {
     @extend %smallCard;
+}
+
+.smallCard2 {
+    @extend %smallCard2;
 }
 
 .navbar {
@@ -35,11 +40,13 @@ body {
     height: 100vh;
 }
 
+
+
 .notGraph {
     display: flex;
     width: 100%;
     justify-content: center;
-    
+
     .column {
         flex-grow: 1;
     }
@@ -65,4 +72,8 @@ body {
         display: flex;
         align-items: center;
     }
+}
+
+.container2 h1 {
+    font-size: 30px;
 }

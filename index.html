@@ -8,6 +8,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
 
 <body>
@@ -41,12 +43,10 @@
 
         <div class="notNavbar">
 
-            <div class="container1 contentCard">
+            <div class="contentCard">
                 Your total balance is
 
-                <div style="width: 100%; height: 300px; background-color: blue;">
-                    $6,522.40 12m 30d 7d 24h View report
-                </div>
+                <canvas class="graph" id="graph"></canvas>
             </div>
 
             <div class="notGraph">
@@ -57,8 +57,15 @@
                             <div>
                                 <span class="material-symbols-outlined">roofing</span>
                                 <h3>Home Deposit</h3>
+
                             </div>
                             <div class="material-symbols-outlined">more_horiz</div>
+
+                        </div>
+                        <h1 class="money">$15,592,30</h1>
+                        <div class="progress-container">
+                            <progress value="64" max="100"></progress>
+                            <span> 64%</span>
                         </div>
                     </div>
                     <div class="container4 contentCard">
@@ -103,10 +110,10 @@
                     </div>
 
                     <div class="container5 contentCard">
-                        <h6>Your total balance are</h6>
+                        <h6>Your total balance is</h6>
                         <div><span class="material-symbols-outlined">humidity_high</span>$6,522.40</div>
-                        <p> Account Details </p>
-                        <p>Send a Payment</p>
+                        <p class="smallCard"> Account Details </p>
+                        <p class="smallCard2">Send a Payment</p>
 
                     </div>
                 </div>
