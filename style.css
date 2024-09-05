@@ -48,6 +48,15 @@ body {
   height: 100vh;
 }
 
+.notGraph {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.notGraph .column {
+  flex-grow: 1;
+}
+
 .pageContent {
   display: flex;
 }
