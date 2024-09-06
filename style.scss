@@ -38,6 +38,28 @@ body {
     height: calc(100vh - ((#{defaultSizes.$contentCardPadding} * 2) + (#{defaultSizes.$contentCardMargin} * 2)));
     flex-grow: 2;
     justify-content: space-between;
+    align-items: flex-start;
+
+    .column {
+        vertical-align: bottom;
+
+        p {
+
+            &:hover {
+                border: 1px solid colors.$secondaryColor;
+                padding: 9px 19px;
+                border-radius: 20px;
+            }
+
+            padding: 10px 20px;
+
+
+        }
+
+        .material-symbols-outlined {
+            margin-right: 20px;
+        }
+    }
 }
 
 progress {
@@ -61,8 +83,6 @@ progress {
 
     .column {
         flex-grow: 1;
-        height: 60vh;
-        
     }
 }
 
@@ -74,7 +94,7 @@ progress {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+
 }
 
 
@@ -82,10 +102,12 @@ progress {
 .container2 h1 {
     font-size: 30px;
 }
-.bigNumber{
+
+.bigNumber {
     font-size: xx-large;
 }
-.smallerNumber{
+
+.smallerNumber {
     font-size: x-large;
 }
 
@@ -96,18 +118,45 @@ progress {
 }
 
 
-.viewReport{
+.viewReport {
     display: flex;
     flex-direction: flex-end;
     height: 20px;
 }
 
-.price{
+.price {
     display: flex;
     justify-content: center;
 }
 
-.date{
+.date {
     display: flex;
     justify-content: flex-end;
+}
+
+.miniNav {
+    display: flex;
+    justify-content: space-between;
+    width: 28%;
+}
+
+.cont4main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+    & div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        vertical-align: bottom;
+    }
+
+    & span {
+        display: flex;
+        justify-content: space-between;
+        
+    }
 }

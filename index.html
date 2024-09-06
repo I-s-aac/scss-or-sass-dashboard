@@ -21,22 +21,23 @@
             <div><span class="material-symbols-outlined logo">humidity_high</span>Orc</div>
 
             <div class="column">
-                <span><span class="material-symbols-outlined">home</span>HOME</span>
-                <span><span class="material-symbols-outlined">paid</span>Dashboard</span>
-                <span><span class="material-symbols-outlined">bid_landscape</span>Statistics</span>
-                <span><span class="material-symbols-outlined">lab_profile</span>Reporting</span>
-                <span><span class="material-symbols-outlined">shield</span>Security</span>
-                <span><span class="material-symbols-outlined">settings</span>Settings</span>
+                <p><span class="material-symbols-outlined">home</span>HOME</p>
+                <p><span class="material-symbols-outlined">paid</span>Dashboard</p>
+                <p><span class="material-symbols-outlined">bid_landscape</span>Statistics</p>
+                <p><span class="material-symbols-outlined">lab_profile</span>Reporting</p>
+                <p><span class="material-symbols-outlined">shield</span>Security</p>
+                <p><span class="material-symbols-outlined">settings</span>Settings</p>
             </div>
 
             <div class="email">
                 <div>
-                    <span><span class="material-symbols-outlined">light_mode</span>Light</span>
-                    <span><span class="material-symbols-outlined">dark_mode</span>Dark</span>
+                    <span onclick="enableLightMode()"><span
+                            class="material-symbols-outlined">light_mode</span>Light</span>
+                    <span onclick="enableDarkMode()"><span class="material-symbols-outlined">dark_mode</span>Dark</span>
                 </div>
                 <div>
                     <p><span class="material-symbols-outlined">account_circle</span>Craig Franci</p>
-                    <p>franci@gmail.com</p>
+                    <span>franci@gmail.com</span>
 
                 </div>
             </div>
@@ -51,86 +52,128 @@
                 </div>
                 <div class="contentCardTitle">
                     <p class="bigNumber">$6,522.40</p>
-                    <button class="viewReport">View Report</button>
+
+                    <div class="miniNav">
+                        <p>12M</p>
+                        <p>30D</p>
+                        <p>7D</p>
+                        <p>24H</p>
+                        <button class="viewReport">View Report</button>
+                    </div>
 
                 </div>
 
-            <canvas class="graph" id="graph"></canvas>
+                <canvas class="graph" id="graph"></canvas>
 
             </div>
 
-        
-        <div class="notGraph">
 
-            <div class="column">
-                <div class="container2 contentCard">
-                    <div class="contentCardTitle">
-                        <div>
-                            <span class="material-symbols-outlined">roofing</span>
-                            <h3>Home Deposit</h3>
+            <div class="notGraph">
+
+                <div class="column">
+                    <div class="container2 contentCard">
+                        <div class="contentCardTitle">
+                            <div>
+                                <span class="material-symbols-outlined">roofing</span>
+                                <h3>Home Deposit</h3>
+
+                            </div>
+                            <div class="material-symbols-outlined">more_horiz</div>
 
                         </div>
-                        <div class="material-symbols-outlined">more_horiz</div>
-
-                    </div>
-                    <div class="smallerNumber">$15,592,30</div>
-                    <div class="progress-container">
-                        <progress value="64" max="100"></progress>
-                        <span> 64%</span>
-                    </div>
-                </div>
-                <div class="container4 contentCard">
-                    <div class="cont4Top">
-                        <h3>Transactions</h3>
-
-                        <h4>Completed</h4>
-                    </div>
-                    <div>
-                        <span><span class="material-symbols-outlined">headphones</p>Spotify</span>
-                        <p>Subscriptions <span class="price">-18.99</p><p> <p class="date">Wed
-                            1:20am</span></p>
-                        <p><p class="material-symbols-outlined">payments</p>Gumroad</p>
-                        <p"">Income +1,180.99 Wed 7:45pm</p>
-                            <p><p class="material-symbols-outlined">public</p>Webflow</p>
-                            <p>Subscriptions -58.99 Wed 5:10am</p>
-                            <p><p class="material-symbols-outlined">theaters</p>Netflix</p>
-                            <p>Subscriptions -28.99 Tue 3:20am</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="container3 contentCard">
-
-                    <div class="contentCardTitle">
-                        <h3>Your cards</h3>
-                        <div class="material-symbols-outlined">more_horiz</div>
-                    </div>
-
-                    <div class="contentCardContent">
-                        <div class="smallCard">
-                            <span class="material-symbols-outlined">humidity_high</span>
-                            Craig Franci .... .... .... 9834 VISA
-                        </div>
+                        <div class="smallerNumber">$15,592,30</div>
                         <div class="progress-container">
-                            <progress value="6522.40" max="20000"></progress>
+                            <progress value="64" max="100"></progress>
+                            <span> 64%</span>
                         </div>
-                        <p class="smallerNumber">$6,522.40/ $20,000 limit</p>
+                    </div>
+                    <div class="container4 contentCard">
+                        <div class="cont4Top"> <!-- replace class with contentCardTitle? -->
+                            <h3>Transactions</h3>
+
+                            <h4>Completed</h4>
+                        </div>
+                        <div class="cont4main">
+                            <div>
+                                <span>
+                                    <span class="material-symbols-outlined">headphones</span>
+                                    Spotify
+                                </span>
+                                <span>Subscriptions</span>
+                                <span class="price">-18.99</span>
+                                <span class="date">Wed 1:20am</span>
+
+                            </div>
+                            <div>
+                                <span>
+                                    <span class="material-symbols-outlined">
+                                        payments
+                                    </span>
+                                    Gumroad
+                                </span>
+                                <span>Income</span>
+                                <span class="price">+1,180.99</span>
+                                <span class="date">Wed7:45pm</span>
+                            </div>
+                            <div>
+                                <span>
+                                    <span class="material-symbols-outlined">
+                                        public
+                                    </span>
+                                    Webflow
+                                </span>
+                                <span>Subscriptions</span>
+                                <span class="price">-58.99</span>
+                                <span class="date">Wed 5:10am</span>
+                            </div>
+                            <div>
+
+                                <span>
+                                    <span class="material-symbols-outlined">
+                                        theaters
+                                    </span>
+                                    Netflix
+                                </span>
+                                <span>Subscriptions</span>
+                                <span class="price">-28.99</span>
+                                <span class="date">Tue 3:20am</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <div class="column">
+                    <div class="container3 contentCard">
 
-                <div class="container5 contentCard">
-                    <h2>Your total balance is</h2>
-                    <div class="bigNumber"><span class="material-symbols-outlined">humidity_high</span>$6,522.40
+                        <div class="contentCardTitle">
+                            <h3>Your cards</h3>
+                            <div class="material-symbols-outlined">more_horiz</div>
+                        </div>
+
+                        <div class="contentCardContent">
+                            <div class="smallCard">
+                                <span class="material-symbols-outlined">humidity_high</span>
+                                Craig Franci .... .... .... 9834 VISA
+                            </div>
+                            <div class="progress-container">
+                                <progress value="6522.40" max="20000"></progress>
+                            </div>
+                            <p class="smallerNumber">$6,522.40/ $20,000 limit</p>
+                        </div>
                     </div>
-                    <p class="smallCard"> Account Details </p>
-                    <p class="smallCard2">Send a Payment</p>
 
+
+                    <div class="container5 contentCard">
+                        <h2>Your total balance is</h2>
+                        <div class="bigNumber"><span class="material-symbols-outlined">humidity_high</span>$6,522.40
+                        </div>
+                        <p class="smallCard"> Account Details </p>
+                        <p class="smallCard2">Send a Payment</p>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 </body>

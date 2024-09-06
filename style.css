@@ -66,6 +66,21 @@ body {
   height: calc(100vh - (20px * 2 + 20px * 2));
   flex-grow: 2;
   justify-content: space-between;
+  align-items: flex-start;
+}
+.navbar .column {
+  vertical-align: bottom;
+}
+.navbar .column p {
+  padding: 10px 20px;
+}
+.navbar .column p:hover {
+  border: 1px solid #004d4d;
+  padding: 9px 19px;
+  border-radius: 20px;
+}
+.navbar .column .material-symbols-outlined {
+  margin-right: 20px;
 }
 
 progress {
@@ -89,7 +104,6 @@ progress {
 }
 .notGraph .column {
   flex-grow: 1;
-  height: 60vh;
 }
 
 .pageContent {
@@ -100,7 +114,6 @@ progress {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
 }
 
 .container2 h1 {
@@ -135,4 +148,27 @@ progress {
 .date {
   display: flex;
   justify-content: flex-end;
+}
+
+.miniNav {
+  display: flex;
+  justify-content: space-between;
+  width: 28%;
+}
+
+.cont4main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.cont4main div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: bottom;
+}
+.cont4main span {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
