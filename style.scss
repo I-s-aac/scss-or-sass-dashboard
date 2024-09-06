@@ -71,6 +71,11 @@ progress {
     flex-direction: column;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 .notNavbar {
     flex-grow: 4;
     height: 100vh;
@@ -93,8 +98,9 @@ progress {
 .email {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 
@@ -122,6 +128,7 @@ progress {
     display: flex;
     flex-direction: flex-end;
     height: 20px;
+    border-radius: 4px;
 }
 
 .price {
@@ -142,21 +149,28 @@ progress {
 
 .cont4main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
 
 
-    & div {
+    div {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        vertical-align: bottom;
     }
+}
 
-    & span {
-        display: flex;
-        justify-content: space-between;
-        
-    }
+.light,
+.dark {
+    border-radius: 10px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+}
+.logotext{
+    font-size: xx-large;
+}
+.logoColor{
+    color: ;
 }

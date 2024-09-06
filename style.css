@@ -59,7 +59,7 @@
 }
 
 body {
-  background-color: rgb(168, 168, 168);
+  background-color: rgb(223, 223, 223);
 }
 
 .navbar {
@@ -92,6 +92,11 @@ progress {
   flex-direction: column;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .notNavbar {
   flex-grow: 4;
   height: 100vh;
@@ -113,7 +118,9 @@ progress {
 .email {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .container2 h1 {
@@ -158,17 +165,24 @@ progress {
 
 .cont4main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;
 }
 .cont4main div {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  vertical-align: bottom;
 }
-.cont4main span {
-  display: flex;
-  justify-content: space-between;
+
+.light,
+.dark {
+  border-radius: 10px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logotext {
+  font-size: xx-large;
 }/*# sourceMappingURL=style.css.map */
