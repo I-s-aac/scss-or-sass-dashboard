@@ -1,17 +1,39 @@
 @use '../../colors';
+@use '../../defaultSizes';
 
 %contentCard {
     display: flex;
     flex-direction: column;
     background-color: colors.$cardBackgroundColor;
     border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
+    padding: defaultSizes.$contentCardPadding;
+    margin: defaultSizes.$contentCardMargin;
 
-    h1:first-of-type,
+    //overflow-y: auto;
+
+    transition-duration: 0.3s;
+
+    &:hover {
+        margin: 15px;
+        padding: 25px;
+    }
+
+    /* h1:first-of-type,
     h2:first-of-type,
     h3:first-of-type {
         color: colors.$textColor;
         font-size: larger;
+    } */
+}
+
+%contentCardTitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    vertical-align: center;
+
+    div {
+        display: flex;
+        align-items: center;
     }
 }

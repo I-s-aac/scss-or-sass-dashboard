@@ -1,8 +1,13 @@
 @use 'components/contentCard/contentCard';
 @use 'components/smallCard/smallCard';
 @use 'components/graph/graph';
+@use 'defaultSizes';
 @use 'colors';
 @use 'icons';
+
+* {
+    font-family: sans-serif;
+}
 
 body {
     background-color: colors.$pageBackgroundColor;
@@ -10,6 +15,10 @@ body {
 
 .contentCard {
     @extend %contentCard;
+}
+
+.graph {
+    @extend %graph;
 }
 
 .smallCard {
@@ -20,14 +29,19 @@ body {
     @extend %smallCard2;
 }
 
+.contentCardTitle {
+    @extend %contentCardTitle;
+}
+
 .navbar {
     @extend %contentCard;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    flex-grow: 0;
+    height: calc(100vh - ((#{defaultSizes.$contentCardPadding} * 2) + (#{defaultSizes.$contentCardMargin} * 2)));
+    flex-grow: 2;
     justify-content: space-between;
+}
 
+progress {
+    background-color: colors.$secondaryColor;
 }
 
 .column {
@@ -40,8 +54,6 @@ body {
     height: 100vh;
 }
 
-
-
 .notGraph {
     display: flex;
     width: 100%;
@@ -49,6 +61,8 @@ body {
 
     .column {
         flex-grow: 1;
+        height: 60vh;
+        
     }
 }
 
@@ -63,17 +77,37 @@ body {
     align-items: flex-start;
 }
 
-.contentCardTitle {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
 
-    div {
-        display: flex;
-        align-items: center;
-    }
-}
 
 .container2 h1 {
     font-size: 30px;
+}
+.bigNumber{
+    font-size: xx-large;
+}
+.smallerNumber{
+    font-size: x-large;
+}
+
+.cont4Top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.viewReport{
+    display: flex;
+    flex-direction: flex-end;
+    height: 20px;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+}
+
+.date{
+    display: flex;
+    justify-content: flex-end;
 }
