@@ -168,9 +168,17 @@ progress {
     justify-content: center;
     align-items: center;
 }
-.logotext{
+
+.logo {
+    font-size: xx-large;
+    &:not(span) {
+        color: colors.$secondaryColor;
+    }
+}
+
+.logoText{
     font-size: xx-large;
 }
 .logoColor{
-    color: ;
+    color: colors.$secondaryColor;
 }

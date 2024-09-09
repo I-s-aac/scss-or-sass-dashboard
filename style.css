@@ -145,6 +145,7 @@ progress {
   display: flex;
   flex-direction: flex-end;
   height: 20px;
+  border-radius: 4px;
 }
 
 .price {
@@ -183,6 +184,17 @@ progress {
   align-items: center;
 }
 
-.logotext {
+.logo {
   font-size: xx-large;
+}
+.logo:not(span) {
+  color: #004d4d;
+}
+
+.logoText {
+  font-size: xx-large;
+}
+
+.logoColor {
+  color: #004d4d;
 }/*# sourceMappingURL=style.css.map */
